@@ -139,15 +139,42 @@ foreach ($cards as $card) {
 }
 @endphp
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Prodotti</title>
-        <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    </head>
+@extends('layout.app')
 
-@include('partials.header')
-@include('prodotti.main')
+
+
+@section('main')
+    <div class="container">
+        <div class="cards">
+            <h2>le lunghe</h2>
+            <div class="section">
+                @foreach ($lunghe as $card)
+                    <div class="card">
+                        <h3>{{$card['titolo']}}</h3>
+                        <img src="{{$card['src-h']}}" alt="{{$card['titolo']}}">
+                    </div>
+                @endforeach
+            </div>
+            <h2>le corte</h2>
+            <div class="section">
+                @foreach ($corte as $card)
+                    <div class="card">
+                        <h3>{{$card['titolo']}}</h3>
+                        <img src="{{$card['src-h']}}" alt="{{$card['titolo']}}">
+                    </div>
+                @endforeach
+            </div>
+            <h2>le cortissime</h2>
+            <div class="section">
+                @foreach ($cortissime as $card)
+                    <div class="card">
+                        <h3>{{$card['titolo']}}</h3>
+                        <img src="{{$card['src-h']}}" alt="{{$card['titolo']}}">
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+@endsection
+
 @include('partials.footer')
