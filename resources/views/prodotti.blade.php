@@ -140,7 +140,7 @@ foreach ($cards as $card) {
 @endphp
 
 @extends('layout.app')
-
+@section('title', 'Prodotti')
 
 
 @section('main')

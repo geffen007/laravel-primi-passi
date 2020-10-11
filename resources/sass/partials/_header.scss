@@ -1,11 +1,25 @@
 header{
     text-align: center;
-    ul {
+    ul{
         li{
+            font-family: 'Teko', sans-serif;
             display: inline;
             font-size: 30px;
-            padding: 30px;
+
+
+        }
+        li:hover{
+            background: #b3e5fc;
+        }
+        .active,
+        .noactive{
+            padding: 0px 30px;
             color: black;
+        }
+        .active{
+            background: #b3e5fc;
+            color: black;
+
         }
     }
 }
